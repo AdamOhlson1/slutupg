@@ -33,8 +33,7 @@ var morseAlphabet = new Dictionary<char, string>
     {'Z', "--.."}
 };
 
-app.MapGet("/", () => "Hello World!");
-app.MapGet("/morse", () => GetMorseAlphabet());
+app.MapGet("/", () => GetMorseAlphabet());
 app.MapGet("/kryptera/{text}", (string text) => KrypteraMorse(text));
 app.MapGet("/avkryptera/{morseCode}", (string morseCode) => AvkrypteraMorse(morseCode, morseAlphabet));
 
